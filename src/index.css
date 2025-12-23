@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global base */
+body {
+  margin: 0;
+  background-color: #0b0f1a;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Reusable UI utilities (enterprise-safe) */
+.btn-primary {
+  @apply px-5 py-3 rounded-md bg-green-500 text-black font-medium hover:bg-green-400 transition;
+}
+
+.btn-secondary {
+  @apply px-5 py-3 rounded-md border border-white/20 hover:border-white/40 transition;
+}
+
+.input {
+  @apply w-full px-4 py-3 rounded-md bg-bg border border-white/10 text-white placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-green-500/40;
+}
+
+/* Muted text helper */
+.text-muted {
+  @apply text-white/60;
+}
+
+/* Background helper (matches brand) */
+.bg-bg {
+  background-color: #0b0f1a;
+}
